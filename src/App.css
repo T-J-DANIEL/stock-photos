@@ -1,38 +1,107 @@
-.App {
+* {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  margin: 2em 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 5px;
+  min-height: 110vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* .container * {
+  width: 30%;
+} */
+
+h3 {
+  margin-top: 2em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hoverBoy {
+  position: fixed;
+  left: 0px;
+  top: 15px;
+  background: white;
+  border: 2px solid red;
+}
+
+.card-container{
+  position: relative;
+  width: 30%;
+  overflow: hidden;
+}
+
+.card-container img{
+  width:100%;
+  height:100%;
+}
+
+.image-info{
+  width: 100%;
+  height: 25%;
+  min-height: 50px;
+  background: rgba(86, 94, 79, 0.5);
+  color: white;
+  position: absolute;
+  left:0;
+  bottom:0;
+  transform:translateY(100%);
+  transition: transform 500ms ease;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+}
+.inner-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90%;
+  width: 90%;
+  outline:2px solid red;
+}
+.img-info-container{
+  border-radius: 50%;
+  margin-left: .5em;
+  width: 30%;
+  max-height:90%;
+  border-radius: 75%;
+  overflow:hidden;
+}
+
+.img-info-container img{
+  outline: 3px solid white;
+  border-radius: 75%;
+  height: 100%;
+  width: 100%;
+}
+
+.text-info{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: auto;
+  font-size: .5rem;
+}
+.text-info h4{
+  /* font-size: 1rem; */
+  margin: 0;
+}
+.card-container:hover .image-info{
+  transform:translateY(0);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* @media(min-width :700px){ */
+   /* .img-info-container {
+     margin-left: 1em;
+   }
+  .img-info-container img{
+     /* height: 5em;
+  width: 40%; */
+  /* }
+  .text-info{
+    font-size: 3rem;
+  } 
+} */
